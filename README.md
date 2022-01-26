@@ -60,13 +60,12 @@ and also when communicating with servers(eg. calling to make a tunnel)
 reserved
 
 ## Data formating
-
 ### Header
 #### Login pass
 The pass data to identify the user<br>
-FORMAT: pass->pass_data<-pass
-pass: a code that server return on login request
-(need to be decrypted then encrypted)
+FORMAT: pass->pass_data<-pass<br>
+pass: a code that server return on login request<br>
+(need to be decrypted then encrypted)<br>
 REQUIRE: All
 #### Request: 
 The request type for the data<br>
