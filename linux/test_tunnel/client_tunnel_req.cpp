@@ -1,7 +1,7 @@
 //systemlib
 #include<unistd.h>
 //std lib
-#include<bits/stdc++.h>
+#include"stdc++.h"
 //network lib
 #include<sys/socket.h>
 #include<arpa/inet.h>
@@ -9,11 +9,14 @@
 int main(int argc,char const *argv[])
 {
 	//var for network
-	int sock = 0,valread;
+	int sock = 0,valread,port;
 	struct sockaddr_in serv_addr;
-	std::string message = argv[2];
-	std::string serverip = argv[1];
-	int port = std::stoi(argv[0]);
+	//parms
+	std::string message = argv[3];
+	std::string serverip = argv[2];
+	std::stringstream p;
+	p << argv[1];
+	p >> port;
 	char buffer[1024] ={0};
 	std::string strbuffer;
 	//create socket file
