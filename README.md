@@ -100,15 +100,35 @@ It should be encrypted to be only can be read by the main server or data server.
 ### Body
 
 #### Format
-start->data<-end
+start->body<-end
+#### Extra
+Extra is extra information for handling the data
+##### Format
+extra->list of extra<-extra<br>
+FORMAT: extra_type:infromation;
+##### Extra types
+###### data_type
+inform the type of the data<br>
+TYPES:<br>
+text: text message<br>
+file: file<br>
+eg. data_type:text;
+###### file_name
+inform the name and the extension of the file<br>
+eg. file_name:hello_world.exe;
+###### plugin
+extra information for plugin to handle<br>
+FORMAT: plugin:plugin_name:information;<br>
+information can be anything
+#### Data
+Data is the main content<br>
+##### Format
+data->data<-data
 
-### Data
-Data should be encrypted for main server or client.<br>
-#### For main server: 
-Type: plugins,tunnel
-#### For Client
+#### Encrypting for main server: 
+Type: plugins,tunnel,login,register
+#### Encrypting for Client
 Type: urgent,pack
-
 # Plugin API
 reserved
 
