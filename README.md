@@ -62,14 +62,23 @@ reserved
 ## Data formating
 
 ### Header
+#### Login pass
+The pass data to identify the user<br>
+FORMAT: pass->pass_data<-pass
+pass: a code that server return on login request
+(need to be decrypted then encrypted)
+REQUIRE: All
 #### Request: 
 The request type for the data<br>
 FORMAT: type<br>
-list of type: tunnel,pack,urgent,plugin<br>
+list of type: tunnel,pack,urgent,plugin,register,login<br>
 tunnel: request to open tunnel(to main server or data server)<br>
 pack: type to state that it carry text or file<br>
 urgent: same as pack,but it will be process in urgent mode
 plugin: request to plugin
+register: requst to register a new user id
+login: request a pass_data for login
+(it returns with a encrypted form)
 REQUIRE: All
 
 #### Target: 
@@ -78,7 +87,7 @@ FORMAT: mainserver: dataserver<br>
 mainserver: ip or domain<br>
 dataserver: ip or domain or data_server_id(only needed if you use a data server)<br>
 id: the id of the user<br><br>
-REQUIRE: All(exclude plugins,pack)
+REQUIRE: All(exclude plugin,pack,login,register)
 
 #### Target(plugin): 
 The target plugin api<br>
