@@ -128,7 +128,7 @@ data->data<-data
 
 #### Encrypting for main server: 
 Type: plugins,tunnel,login,register<br>
-,start->,<-end
+"start->","<-end"
 #### Encrypting for Client
 Type: urgent,pack
 reserved
