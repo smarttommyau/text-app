@@ -60,16 +60,18 @@ and also when communicating with servers(eg. calling to make a tunnel)
 reserved
 
 ## Data formating
-### Header
-#### Login pass
+### Login pass
 The pass data to identify the user<br>
 FORMAT: pass->pass_data<-pass<br>
 pass: a code that server return on login request<br>
 (need to be decrypted then encrypted)<br>
 REQUIRE: All
+### Header
+#### Format
+header->header<-header
 #### Request: 
 The request type for the data<br>
-FORMAT: type<br>
+FORMAT: type:type;<br>
 list of type: tunnel,pack,urgent,plugin,register,login<br>
 tunnel: request to open tunnel(to main server or data server)<br>
 pack: type to state that it carry text or file<br>
@@ -82,7 +84,7 @@ REQUIRE: All
 
 #### Target: 
 The target of the reciver<br>
-FORMAT: mainserver: dataserver<br>
+FORMAT: target:mainserver: dataserver;<br>
 mainserver: ip or domain<br>
 dataserver: ip or domain or data_server_id(only needed if you use a data server)<br>
 id: the id of the user<br><br>
@@ -90,7 +92,7 @@ REQUIRE: All(exclude plugin,pack,login,register)
 
 #### Target(plugin): 
 The target plugin api<br>
-FORMAT: plugin_id<br>
+FORMAT: target:plugin_id;<br>
 REQUIRE: plugin
 
 #### Encryption of Header
