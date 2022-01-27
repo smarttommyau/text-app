@@ -127,10 +127,10 @@ Data is the main content<br>
 data->data<-data
 
 #### Encrypting for main server: 
-Type: plugins,tunnel,login,register
+Type: plugins,tunnel,login,register<br>
+,start->,<-end
 #### Encrypting for Client
 Type: urgent,pack
-# Plugin API
 reserved
 
 # ROADMAP
