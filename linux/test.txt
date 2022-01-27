@@ -1,1 +1,0 @@
-pass->tommyhelloworld<-passheader->request:login;target:main_server;<-headerstart->extra->file_type:text;<-extradata->hello<-data<-end
