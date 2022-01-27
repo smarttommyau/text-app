@@ -1,7 +1,7 @@
 //systemlib
 #include<unistd.h>
 //std lib
-#include"stdc++.h"
+#include"lib/stdc++.h"
 //network lib
 #include<sys/socket.h>
 #include<arpa/inet.h>
