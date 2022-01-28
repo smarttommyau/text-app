@@ -6,16 +6,16 @@ struct Header{
 	std::string request;
 	std::string target;
 };
-struct Data{
+struct msg_Data{
 	std::string extra;
 	std::string data;
 };
 struct msg{
 	std::string login_pass;
 	struct Header Header;
-	struct Data Data;
+	struct msg_Data Data;
 };
-std::string Assemble_data(struct Data data);
+std::string Assemble_data(struct msg_Data data);
 std::string Assemble_msg(struct msg msg){
 	std::stringstream str;
 	str << "pass->" << msg.login_pass << "<-pass";
@@ -27,7 +27,7 @@ std::string Assemble_msg(struct msg msg){
 	return str.str();
 }
 
-std::string Assemble_data(struct Data data){
+std::string Assemble_data(struct msg_Data data){
 	//need encrypte
 	std::stringstream str;
 	str << "extra->" << data.extra << "<-extra";
