@@ -63,8 +63,8 @@ reserved
 ### Login pass
 The pass data to identify the user<br>
 FORMAT: pass->pass_data<-pass<br>
-pass: a code that server return on login request<br>
-(need to be decrypted then encrypted)<br>
+Format of pass_data: user_id:user_id;pass_code:code;<br>
+code:generate with certain algrothm.
 REQUIRE: All
 ### Header
 #### Format
