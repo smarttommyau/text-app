@@ -84,7 +84,9 @@ std::string send_pack(struct send_data send_data){
 		return "err3:connection failed";
 	//send message
 	long unsigned int len = send_data.message.length();
-	
+	//FIXME:test code,delete it later
+//	unsigned char byte[] = {0xFF,0xFF,0xFF,0xFF};
+//	send(sock,(void*)&byte,sizeof(byte),0);
 	send(sock,(void*)&len,sizeof(len),0);
 	std::cout << "len:" << len << "bytes" << std::endl;
 	send(sock,send_data.message.c_str(),send_data.message.length(),0);
