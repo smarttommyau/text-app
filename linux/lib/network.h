@@ -14,7 +14,7 @@ struct send_data{
 	int port;
 };
 
-bool readbits(int socket,void* buffer,unsigned int size){
+bool readbits(int socket,char* buffer,unsigned int size){
 	int finished = 0;
 	int result;
 	long long run;
@@ -45,12 +45,12 @@ std::string getmessage(int new_socket){
 	//get length
 	long unsigned int len = 0;
 	char* buffer = 0;
-	if(!readbits(new_socket,(void*)(&len),sizeof(len))){
+	if(!readbits(new_socket,(char*)(&len),sizeof(len))){
 		return "";
 	}
 	std::cout << "socket:" << len << "bytes" << std::endl;
 	buffer = new char[len+1];
-	if(!readbits(new_socket,(void*)buffer,len)){
+	if(!readbits(new_socket,(char*)buffer,len)){
 		return "dead";
 	}
 	buffer[len] = '\0';
