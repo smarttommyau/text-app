@@ -12,7 +12,7 @@ So we can deploy a data server to solve this.
 ### Data server
 The data server is a server that you trust or is deployed by yourself.
 It should consume very little CPU usage
-so that you can deploy it on pc or desktop without affecting the normal use of the computer.
+so that you can deploy it on pc or desktop or even old phones without affecting the normal use of the computer.
 Also, a public IP or domain is optional,
 you can receive an id from the main server.
 
