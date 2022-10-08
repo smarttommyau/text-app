@@ -1,6 +1,6 @@
 # text-app
 A multi-platform text app with new ways on protecting privacy, and plugin API. (not yet available)
-
+Current Working in the main Server(80% finished).
 # The ways to transfer data
 
 ## Tunneling mode
